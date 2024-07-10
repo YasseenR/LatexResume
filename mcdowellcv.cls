@@ -23,7 +23,7 @@
 \ProvidesClass{mcdowellcv}[2022/03/18 v1.2.0 McDowell CV class]
 
 % Set up the fonts according to options
-\def\mainfontsize{11pt}
+\def\mainfontsize{14pt}
 \def\mainfontface{Times New Roman}
 
 \DeclareOption{calibri}{%
@@ -224,7 +224,7 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
   \notblank{#4}{\toggletrue{righttitledefined}}{}
   \ifboolexpr{togl {lefttitledefined} or togl {centertitledefined} or togl {righttitledefined}}{
     \begin{tabu} to 1\textwidth { X[l,p] X[c,p] X[r,p] }
-      \textbf{#2} & \textbf{#3} & \textbf{#4} \\
+      \small\textbf{#2} & \small\textbf{#3} & \small\textbf{#4} \\
     \end{tabu}
     % Add space according to the specidied number of lines
     \ifnumcomp{#1}{=}{1}{\vspace*{\aftersinglelinesubsectionheaderspace}}{
