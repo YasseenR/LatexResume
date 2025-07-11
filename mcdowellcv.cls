@@ -203,7 +203,7 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
   \vspace*{\beforesectionheaderspace}
   % Set text margins to equal \tabcolsep (6pt by default)
   \begin{adjustwidth}{\sectionheadermargin}{\sectionheadermargin}
-    \textsc{\textbf{#1}}
+    \large\textsc{\textbf{#1}}
   \end{adjustwidth}
   \vspace*{\beforesectionheaderhrulespace}
   \hrule height \sectionheaderhrlueheight
@@ -223,7 +223,7 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
   \notblank{#3}{\toggletrue{centertitledefined}}{}
   \notblank{#4}{\toggletrue{righttitledefined}}{}
   \ifboolexpr{togl {lefttitledefined} or togl {centertitledefined} or togl {righttitledefined}}{
-    \begin{tabu} to 1\textwidth { X[l,p] X[c,p] X[r,p] }
+    \begin{tabu} to \textwidth { X[l] X[c] X[r] }
       \small\textbf{#2} & \small\textbf{#3} & \small\textbf{#4} \\
     \end{tabu}
     % Add space according to the specidied number of lines
